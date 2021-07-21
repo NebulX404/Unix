@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+
+
+  <head>
+    <meta charset="utf-8">
+    <title>Unix</title>
+    <link href="unixlink/goldenage.css" rel="stylesheet" type="text/css">
+    <base target="_blank">
+  </head>
+    
+  <body>
+      <script> 
+        function seconds() {
+            var date = new Date();
+            return Math.round(date.getTime() / 1000);}
+      </script>
+    <div id="title">
+        <h1>The Rise and Fall <br /> of an Unix Epoch</h1>
+        <hr>
+        <div id="readme"> 
+            <a href="unixlink/readme.txt">
+                <img src="unixlink/text-document.svg">
+                <p>Readme.txt</p>
+
+            </a>
+        
+        </div>
+        <hr>
+      </div>
+    <table>
+      <tr>
+        <th class="bold">The Rise</th>
+        <th class="bold">The Fall</th>
+        <th class="bold">The time gap between Rise and Fall is the same gap that separates us from :</th>
+    
+      <!-- ligne : manpage-->
+      <tr>
+          <!-- first release man page unix : November 3, 1971  timestamp : 57974400-->
+        <td> 
+            <p><span class="bold" id="manpage1"></span> sec since</p>
+
+                <script>
+                function showTime1a(){
+                var manpage = seconds()-57974400;
+                document.getElementById("manpage1").innerHTML = manpage ;}
+                setInterval(showTime1a,1000);
+                </script>
+            
+            <p><a href="https://www.bell-labs.com/usr/dmr/www/1stEdman.html">The first edition of the Unix Programmer's Manual, dated November 3, 1971, is available here in image, Postscript, and PDF format. Return with us to the golden days of yesteryear!</a> </p></td>
+          
+          <!-- Apple removed man page : Nov 9 '18 at 6:34  timestamp : 1541745240-->
+        <td>
+            <p><span class="bold" id="manpage2"></span> sec since</p>
+
+                <script>
+                function showTime1b(){
+                var manpage2 = seconds()-1541745240;
+                document.getElementById("manpage2").innerHTML = manpage2;}
+                setInterval(showTime1b,1000);
+                </script>
+            
+            <p><a href="https://stackoverflow.com/questions/53220058/darwin-reference-manual-pages-missing">Apple has either removed all manual pages or I simply can't find them at their new location (specifically macOS) — it's as if they've just conveniently wiped them from existence. </a></p></td>
+          <!-- interval-->
+        <td>
+            <p><span  class="bold" id="manpage3"></span></p>
+                <script>
+                function showTime1c(){
+                var int1 = 1541745240-57974400;
+                var seconds1c = Math.round((new Date).getTime() / 1000)+int1;
+                var myDate = new Date(seconds1c*1000);
+                var manpage3 = (myDate.toGMTString());
+                document.getElementById("manpage3").innerHTML = manpage3;}
+                setInterval(showTime1c,1000);
+                </script></td>
+          
+            </tr>
+        <!-- ligne : pipeline-->
+      <tr>
+          <!-- first release pipe unix : Feb. 1973  timestamp : 97372800-->
+        <td> 
+            <p><span class="bold" id="pipeline1"></span> sec since</p>
+
+                <script>
+                function showTime2a(){
+                var pipeline1 = seconds()-97372800;
+                document.getElementById("pipeline1").innerHTML = pipeline1;}
+                setInterval(showTime2a,1000);
+                </script>
+            
+            <p><a href="https://www.december.com/unix/tutor/pipesfilters.html">Unix commands alone are powerful, but when you combine them together, you can accomplish complex tasks with ease. The way you combine Unix commands is through using pipes.</a> </p></td>
+          
+          <!-- Apple released Otto the Automator : April 29, 2005 timestamp : 1114732800-->
+        <td>
+            <p><span class="bold" id="pipeline2"></span> sec since</p>
+
+                <script>
+                function showTime2b(){
+                var pipeline2 = seconds()-1114732800;
+                document.getElementById("pipeline2").innerHTML = pipeline2;}
+                setInterval(showTime2b,1000);
+                </script>
+            
+            <p><a href="https://en.wikipedia.org/wiki/Pipeline_(Unix)#History">The robot in the icon for Apple's Automator, which also uses a pipeline concept to chain repetitive commands together, holds a pipe in homage to the original Unix concept. </a> </p></td>
+          <!-- interval-->
+        <td>
+            <p><span class="bold" id="pipeline3"></span></p>
+                <script>
+                function showTime2c(){
+                var int1 = 1114732800-97372800;
+                var seconds2c = Math.round((new Date).getTime() / 1000)+int1;
+                var myDate2c = new Date(seconds2c*1000);
+                var pipeline3 = (myDate2c.toGMTString());
+                document.getElementById("pipeline3").innerHTML = pipeline3;}
+                setInterval(showTime2c,1000);
+                </script></td>
+        
+      </tr>
+          <!-- ligne : unixepoch-->
+      <tr>
+          <!-- change Unix epoch to 01/01/1970 (manpage V4) : August 5 1973  (https://stackoverflow.com/questions/11573024/when-was-unix-epoch-time-revised-from-1971-to-current-1970-value)  timestamp : 113356800-->
+        <td> 
+            <p><span class="bold" id="unixepoch1"></span> sec since</p>
+
+                <script>
+                function showTime2a1(){
+                var unixepoch1 = seconds()-113356800;
+                document.getElementById("unixepoch1").innerHTML = unixepoch1;}
+                setInterval(showTime2a1,1000);
+                </script>
+            
+            <p><a href="https://en.wikipedia.org/wiki/Unix_time">Unix time (also known as Epoch time, POSIX time, seconds since the Epoch, or UNIX Epoch time) is a system for describing a point in time. It is the number of seconds that have elapsed since the Unix epoch, minus leap seconds; the Unix epoch is 00:00:00 UTC on 1 January 1970 (an arbitrary date);</a> </p></td>
+          
+          <!-- the 2k38 bug timestamp :2147483647 -->
+        <td>
+            <p><span class="bold" id="unixepoch2"></span> sec before</p>
+
+                <script>
+                function showTime2b2(){
+                var unixepoch2 = 2147483647 - seconds();
+                document.getElementById("unixepoch2").innerHTML = unixepoch2;}
+                setInterval(showTime2b2,1000);
+                </script>
+            
+            <p><a href="http://gregnk.com/2038/">The Year 2038 Problem will cause the clock on many computers and other electronics to stop working, being the result a technical limitation on how computers store the time along with the size of numbers that 32-bit computers can hold, similar to the Year 2000 Problem. Basically, each computer keeps track of time in the UNIX time format. UNIX time is the number of seconds since the 1st of January 1970, which is known as the "epoch". 32-bit variables can hold numbers as big as 2 147 483 647. So once 2 147 483 647 seconds since the epoch has passed, which will be on the 19th of January 2038 at 03:14:07 UTC, the time variable will overflow and revert to -2 147 483 647, causing the computer to think the the date is the 13th of December 1901.</a></p></td>
+          <!-- interval-->
+        <td>
+            <p><span class="bold" id="unixepoch3"></span></p>
+                <script>
+                function showTime2c3(){
+                var int1 = 2147483647-113356800;
+                var seconds2c3 = Math.round((new Date).getTime() / 1000)+int1;
+                var myDate2c3 = new Date(seconds2c3*1000);
+                var unixepoch3 = (myDate2c3.toGMTString());
+                document.getElementById("unixepoch3").innerHTML = unixepoch3;}
+                setInterval(showTime2c3,1000);
+                </script></td>
+        
+      </tr>
+        
+          <!-- ligne : langage C portability-->
+      <tr>
+          <!-- first release C language : November 3, 1973  timestamp : 120960000-->
+        <td> 
+            <p><span class="bold" id="c1"></span> sec since</p>
+
+                <script>
+                function showTime3a(){
+                var c1 = seconds()-120960000;
+                document.getElementById("c1").innerHTML = c1;}
+                setInterval(showTime3a,1000);
+                </script>
+            
+            <p><a href="https://www.log2base2.com/C/basic/introduction-to-c-language.html">If you write a C code in your machine, it will run on any machine which supports C, without modifying a single line of code. Because it is not tied to any hardware or system. We can say, it is a hardware independent language or platform independent language. That is why c is called a portable language.</a></p></td>
+          
+          <!-- Facebook published "Data Portability and Privacy" : Sept' 4 2019  timestamp : 1567555200-->
+        <td>
+            <p><span class="bold" id="c2"></span> sec since</p>
+
+                <script>
+                function showTime3b(){
+                var c2 = seconds()-1567555200;
+                document.getElementById("c2").innerHTML = c2;}
+                setInterval(showTime3b,1000);
+                </script>
+            
+            <p><a href="https://about.fb.com/wp-content/uploads/2020/02/data-portability-privacy-white-paper.pdf">The benefits of data portability to people and markets are clear, which is why our CEO, Mark Zuckerberg, recently called for laws that guarantee portability.1 But to build portability tools people can trust and use effectively, we should develop clear rules about what kinds of data should be portable and who is responsible for protecting that data as it moves to different providers. </a></p></td>
+          <!-- interval-->
+        <td>
+            <p><span class="bold" id="c3"></span></p>
+                <script>
+                function showTime3c(){
+                var int1 = 1567555200-120960000;
+                var seconds3c = Math.round((new Date).getTime() / 1000)+int1;
+                var myDate = new Date(seconds3c*1000);
+                var c3 = (myDate.toGMTString());
+                document.getElementById("c3").innerHTML = c3;}
+                setInterval(showTime3c,1000);
+                </script></td>
+        
+      </tr>
+        
+        <!-- ligne : grep-->
+      <tr>
+          <!-- first release grep tools : November 3, 1973  timestamp : 120960000-->
+        <td> 
+            <p><span class="bold" id="grep1"></span> sec since</p>
+
+                <script>
+                function showTime3a2(){
+                var grep1 = seconds()-120960000;
+                document.getElementById("grep1").innerHTML = grep1;}
+                setInterval(showTime3a2,1000);
+                </script>
+            
+            <p><a href="https://swcarpentry.github.io/shell-novice/07-find/index.html">In the same way that many of us now use ‘Google’ as a verb meaning ‘to find’, Unix programmers often use the word ‘grep’. ‘grep’ is a contraction of ‘global/regular expression/print’, a common sequence of operations in early Unix text editors. It is also the name of a very useful command-line program. ‘grep’ finds and prints lines in files that match a pattern. For our examples, we will use a file that contains three haikus taken from a 1998 competition in Salon magazine. </a></p></td>
+          
+          <!-- adobe added grep to CS3 : April 16 2007  timestamp : 1176681600-->
+        <td>
+            <p><span class="bold" id="grep2"></span> sec since</p>
+
+                <script>
+                function showTime3b2(){
+                var grep2 = seconds()-1176681600;
+                document.getElementById("grep2").innerHTML = grep2;}
+                setInterval(showTime3b2,1000);
+                </script>
+            
+            <p><a href="https://community.adobe.com/t5/indesign/using-the-same-grep-on-all-paragraph-styles/td-p/9656964?profile.language=fr">I'm a big fan of GREPs, particularly for large documents like annual reports. [...]. For example, I always want the phrase 'Corporations Act 2001' in italics, whether it is used in body copy, bullet copy or footnotes. So instead of setting up the GREP in each paragraph style, I want it to apply to the document overall. </a></p></td>
+          <!-- interval-->
+        <td>
+            <p><span class="bold" id="grep3"></span></p>
+                <script>
+                function showTime3c2(){
+                var int1 = 1176681600-120960000;
+                var seconds3c2 = Math.round((new Date).getTime() / 1000)+int1;
+                var myDate = new Date(seconds3c2*1000);
+                var grep3 = (myDate.toGMTString());
+                document.getElementById("grep3").innerHTML = grep3;}
+                setInterval(showTime3c2,1000);
+                </script></td>
+        
+      </tr>
+        
+        <!-- ligne : langage C hello world-->
+      <tr>
+          <!-- "The C Programming Language" by by Brian Kernighan and Dennis Ritchie 22/2/1978 à 0:00:00 UTC timestamp : 256953600-->
+        <td> 
+            <p><span class="bold" id="helloworld1"></span> sec since</p>
+
+                <script>
+                function showTime4a(){
+                var helloworld1 = seconds()-256953600;
+                document.getElementById("helloworld1").innerHTML = helloworld1;}
+                setInterval(showTime4a,1000);
+                </script>
+            
+            <p><a href="https://archive.org/details/TheCProgrammingLanguageFirstEdition/page/n11/mode/2up">The only way to learn a new programming language is by writting programs in it. The first program to write is the same for all languages: Print the words "hello, world".</a></p>
+          
+          <!-- la campagne promotionel de Nike sur Tiger Wood commence, le 28/8/1996 à 0:00:00  utc, timestamp : 952646400 -->
+        <td>
+            <p><span class="bold" id="helloworld2"></span> sec since</p>
+
+                <script>
+                function showTime4b(){
+                var helloworld2 = seconds()-952646400;
+                document.getElementById("helloworld2").innerHTML = helloworld2;}
+                setInterval(showTime4b,1000);
+                </script>
+            
+            <p><a href="https://golf.com/news/tigers-40-biggest-moments-no-16-hello-world-advertisement//">Hello world. There are still courses in the U.S. I am not allowed to play because of the color of my skin. Hello world.
+                </a></p></td>
+          <!-- interval-->
+        <td>
+            <p><span class="bold" id="helloworld3"></span></p>
+                <script>
+                function showTime4c(){
+                var int1 = 952646400-256953600;
+                var seconds3c = Math.round((new Date).getTime() / 1000)+int1;
+                var myDate = new Date(seconds3c*1000);
+                var helloworld3 = (myDate.toGMTString());
+                document.getElementById("helloworld3").innerHTML = helloworld3;}
+                setInterval(showTime4c,1000);
+                </script></td>
+        
+      </tr>
+        <!-- ligne : linux kernel-->
+      <tr>
+          <!-- Linux kernel first released  oct' 5 1991 timestamp : 686620800-->
+        <td> 
+            <p><span class="bold" id="kernel1"></span> sec since</p>
+
+                <script>
+                function showTime5a(){
+                var kernel1 = seconds()-686620800;
+                document.getElementById("kernel1").innerHTML = kernel1;}
+                setInterval(showTime5a,1000);
+                </script>
+            
+            <p><a href="https://en.wikipedia.org/wiki/Linux_kernel_version_history">The Linux kernel is a free and open-source, monolithic, Unix-like operating system kernel.</a></p>
+          
+          <!--  NYSE Launches New Hybrid Trading System àct' 6 2006, timestamp : 1160092800 -->
+        <td>
+            <p><span class="bold" id="kernel2"></span> sec since</p>
+
+                <script>
+                function showTime5b(){
+                var kernel2 = seconds()-1160092800;
+                document.getElementById("kernel2").innerHTML = kernel2;}
+                setInterval(showTime5b,1000);
+                </script>
+            
+            <p><a href="https://www.computerworld.com/article/2554166/nyse-launches-new-hybrid-trading-system.html">For every new application, we talk about the possibility of using it on Linux because of all the good things that Linux brings to the party. These are the systems that historically came from the NYSE side of the overall NYSE Group.
+                </a></p></td>
+          <!-- interval-->
+        <td>
+            <p><span class="bold" id="kernel3"></span></p>
+                <script>
+                function showTime4c(){
+                var int1 = 1160092800-686620800;
+                var seconds3c = Math.round((new Date).getTime() / 1000)+int1;
+                var myDate = new Date(seconds3c*1000);
+                var kernel3 = (myDate.toGMTString());
+                document.getElementById("kernel3").innerHTML = kernel3;}
+                setInterval(showTime4c,1000);
+                </script></td>
+        
+      </tr>
+      
+    </table>
+
+
+ 
+
+<!--<script> 
+        function showTime(){
+            var d = new Date();
+            var seconds = Math.round(d.getTime() / 1000);
+            var A = seconds - 894067200;
+document.getElementById("a").innerHTML = A;}
+  
+    setInterval(showTime,1000);
+    </script>
+        
+        <span id="a"></span>
+        
+        
+        <span id="b"></span>
+       <script>
+var a = Date.now();          
+var b = a.getTime;
+var c = Math.floor(Date.now() / 1000);
+
+document.getElementById("b").innerHTML = a;
+</script>
+
+<span id="c"></span>
+       <script>
+var myDate = new Date(1541745240*1000);
+document.write(myDate.toGMTString()+"<br>"+myDate.toLocaleString());
+
+</script>
+      
+      
+      <p>Date/Time: <span id="datetime2"></span></p>
+
+<script>
+
+        
+        function showTime(){
+            var date = new Date();
+            var seconds = Math.round(date.getTime() / 1000);
+document.getElementById("datetime2").innerHTML = seconds;}
+  
+    setInterval(showTime,1000);
+            
+</script> -->
+
+     </body>
+</html>    
+        
