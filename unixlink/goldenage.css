@@ -1,0 +1,72 @@
+
+#title{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 32em;
+}
+       
+H1 {
+    font-size: 4em;
+    padding: 5% 0;
+    text-align: center;
+
+}
+
+hr{
+    border: 1px solid #000000;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: inherit;
+}
+
+#readme{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: inherit;
+} 
+img {
+  max-width: 12%;
+  height: auto;
+    
+}
+
+table {
+    border-collapse: collapse;
+    border-top: solid 0.18rem  #000000;;
+    margin-top: 5%;
+    width: 100%;
+}
+
+tr {
+    border-bottom: solid 0.18rem #000000;
+    
+}
+th{
+    padding-bottom: 0.5em;
+    padding-right: 2em;
+    text-align: left;
+    vertical-align: text-top;
+    width: 33%;
+    
+}
+td {
+    padding-right: 2em;
+    text-align: left;
+    vertical-align: text-top;
+    width: 33%;
+}
+       
+body{
+    background-color: #FFE800;
+    font-family: Palatino, serif;
+   margin: 2%;
+}
+
+.bold{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+    
