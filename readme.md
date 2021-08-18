@@ -19,13 +19,9 @@ Please visit:
 > on Javascript date objects: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date 
 
 
-EULA
--==-
-[????]
-
 ACKNOWLEDGEMENTS 
 -==============-
-The author would like to thank the NebulX team: [names] for their helpful advices and their technical support.
+The author would like to thank the NebulX team: [Ana, Alejandra, Coline, Ségolène] for their helpful advices and their technical support.
 
 AUTHOR
 -====-
